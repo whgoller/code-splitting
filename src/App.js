@@ -5,8 +5,8 @@ import Page1 from './components/Page1';
 // import Page2 from './components/Page2';
 // import Page3 from './components/Page3';
 
-// create async component
-import asyncComponent from './components/AsyncComponent';
+// create async component //part 3
+// import asyncComponent from './components/AsyncComponent';
 
 class App extends Component {
   constructor() {
@@ -18,9 +18,9 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-
+    // with no code splitting // part 1 and part 3
     this.setState({ route: route })
-    //with codes splitting
+    //with codes splitting // part 2
     // if (route === 'page1') {
     //   this.setState({ route: route })
     // } else if (route === 'page2') {
@@ -45,12 +45,17 @@ class App extends Component {
       return <AsyncPage3 onRouteChange={this.onRouteChange} />
     }
 
+    // part 2
     // render page1 but if the route is anything but page1 then do the else
     // if (this.state.route === 'page1') {
     //   return <Page1 onRouteChange={this.onRouteChange} />
     // } else {
     //   return <this.state.component onRouteChange={this.onRouteChange} />
     // }
+
+    // // part 3
+
+
   }
 }
 
